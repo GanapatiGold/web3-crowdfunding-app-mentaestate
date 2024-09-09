@@ -4,7 +4,7 @@ import { CROWDFUNDING_FACTORY } from "@/app/constants/contracts";
 import { MyCampaignCard } from "@/components/MyCampaignCard";
 import { useState } from "react";
 import { getContract } from "thirdweb";
-import { base } from "thirdweb/chains";
+import { baseSepolia } from "thirdweb/chains";
 import { deployPublishedContract } from "thirdweb/deploys";
 import { useActiveAccount, useReadContract } from "thirdweb/react"
 
@@ -15,7 +15,7 @@ export default function DashboardPage() {
 
     const contract = getContract({
         client: client,
-        chain: base,
+        chain: baseSepolia,
         address: CROWDFUNDING_FACTORY,
     });
 
