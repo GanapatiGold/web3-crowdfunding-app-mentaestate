@@ -83,7 +83,7 @@ const CreateCampaignModal = (
             console.log("Deploying contract...");
             const contractAddress = await deployPublishedContract({
                 client: client,
-                chain: base,
+                chain: baseSepolia,
                 account: account!,
                 contractId: "Crowdfunding",
                 contractParams: [
@@ -92,8 +92,8 @@ const CreateCampaignModal = (
                     campaignGoal,
                     campaignDeadline
                 ],
-                publisher: "0x44096fb7139ac4958E4263272d606D523Df9238f",
-                version: "1.0.2",
+                publisher: "0xEe29620D0c544F00385032dfCd3Da3f99Affb8B2",
+                version: "1.0.6",
             });
             alert("Contract deployed successfully!");
         } catch (error) {
